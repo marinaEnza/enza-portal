@@ -1853,20 +1853,19 @@ paths:
                   params:
                     type: object
                     required:
-                    - message
+                    - transactionId
+                    - approvalCode
+                    - amount
+                    - currency
                     properties:
-                      message:
-                        type: string
-                        description: Success message
-                        example: Successfully reversed the top-up
                       transactionId:
                         type: string
                         description: Transaction ID
-                        example: '251026743389956338'
+                        example: '251218316432285040'
                       approvalCode:
                         type: string
                         description: Transaction approval code
-                        example: 6Q212F
+                        example: BLQP9Y
                       amount:
                         type: string
                         description: Reversed amount
@@ -1881,9 +1880,8 @@ paths:
                   value:
                     code: SUCCESS_REVERSE_TOPUP_COMPLETED
                     params:
-                      message: Successfully reversed the top-up
-                      transactionId: '251026743389956338'
-                      approvalCode: 6Q212F
+                      transactionId: '251218316432285040'
+                      approvalCode: BLQP9Y
                       amount: '100.12'
                       currency: '936'
         '400':
